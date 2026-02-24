@@ -8,7 +8,7 @@
 
 前四章只有pdf，后四章是ppt，我也转了pdf版本
 
-笔记是我自己写的，文件中是markdown，或者你也可以看**语雀**的
+笔记是我自己写的，是markdown，或者你也可以看**语雀**的在线版
 
 [复习](https://www.yuque.com/yuqueyonghuctooox/zdkzyl/zma2flnzhgc9firy)
 
@@ -22,6 +22,6 @@
 
 [第 5 章 线性系统的频域分析法](https://www.yuque.com/yuqueyonghuctooox/zdkzyl/kp8hgz74s5oeh77l)
 
-[第 6 章 系统校正](https://www.yuque.com/yuqueyonghuctooox/zdkzyl/yvgk1r6lnor49wx3)
+[第 6 章 系统校正](https://www.yuque.com/yuqueyonghuctooox/zdkzyl/yvgk1r6lnor49wx3)(忙着复习没写完)
 
-[第 7 章 线性离散控制系统](https://www.yuque.com/yuqueyonghuctooox/zdkzyl/zymwulvybenif5u0)
+[第 7 章 线性离散控制系统](https://www.yuque.com/yuqueyonghuctooox/zdkzyl/zymwulvybenif5u0)(忙着复习没写完)
