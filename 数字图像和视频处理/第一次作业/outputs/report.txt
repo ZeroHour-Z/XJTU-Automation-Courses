@@ -1,0 +1,36 @@
+[Asset Directory]
+E:\Code\XJTU-Automation-Courses\数字图像和视频处理\第一次作业\assets
+
+[7.bmp Header Info]
+bfType: BM
+bfSize: 1134
+bfReserved1: 0
+bfReserved2: 0
+bfOffBits: 1078
+biSize: 40
+biWidth: 7
+biHeight: 7
+biPlanes: 1
+biBitCount: 8
+biCompression: 0
+biSizeImage: 56
+biXPelsPerMeter: 0
+biYPelsPerMeter: 0
+biClrUsed: 0
+biClrImportant: 0
+
+[7.bmp Layout Analysis]
+width: 7
+height: 7
+bit_count: 8
+row_stride_bytes: 8
+pixel_array_size: 56
+
+[Lena Statistics]
+mean: 99.051216
+variance: 2796.031839
+
+[Task Parameters]
+shear_k: 1.5
+rotation_angle_deg: 30.0
+zoom_size: 2048x2048
