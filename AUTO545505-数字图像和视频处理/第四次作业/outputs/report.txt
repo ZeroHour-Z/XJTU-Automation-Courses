@@ -1,0 +1,63 @@
+[Images]
+test1.pgm: shape=(256, 256), min=6, max=255, mean=120.8353, std=71.3312
+test2.tif: shape=(512, 512), min=0, max=202, mean=135.0839, std=42.3748
+test3_corrupt.pgm: shape=(133, 134), min=0, max=255, mean=109.2051, std=121.1118
+test4.tif: shape=(512, 512), min=0, max=254, mean=136.5436, std=57.7858
+
+[Task 1 & 2] Low-pass Filtering (Gaussian sigma=1.5, Median)
+Gaussian kernel visualisation -> lowpass/gaussian_kernels.png
+
+Gaussian kernel 3x3 (sigma=1.5):
+  0.094742  0.118318  0.094742
+  0.118318  0.147761  0.118318
+  0.094742  0.118318  0.094742
+
+Gaussian kernel 5x5 (sigma=1.5):
+  0.014419  0.028084  0.035073  0.028084  0.014419
+  0.028084  0.054700  0.068312  0.054700  0.028084
+  0.035073  0.068312  0.085312  0.068312  0.035073
+  0.028084  0.054700  0.068312  0.054700  0.028084
+  0.014419  0.028084  0.035073  0.028084  0.014419
+
+Gaussian kernel 7x7 (sigma=1.5):
+  0.001342  0.004077  0.007940  0.009916  0.007940  0.004077  0.001342
+  0.004077  0.012383  0.024120  0.030122  0.024120  0.012383  0.004077
+  0.007940  0.024120  0.046979  0.058669  0.046979  0.024120  0.007940
+  0.009916  0.030122  0.058669  0.073269  0.058669  0.030122  0.009916
+  0.007940  0.024120  0.046979  0.058669  0.046979  0.024120  0.007940
+  0.004077  0.012383  0.024120  0.030122  0.024120  0.012383  0.004077
+  0.001342  0.004077  0.007940  0.009916  0.007940  0.004077  0.001342
+
+test1.pgm:
+  Gaussian 3x3: mean=120.8353, std=69.7289
+  Median   3x3: mean=120.3671, std=70.7218
+  Gaussian 5x5: mean=120.8348, std=68.4928
+  Median   5x5: mean=119.8262, std=70.1911
+  Gaussian 7x7: mean=120.8338, std=67.8690
+  Median   7x7: mean=119.4578, std=69.6057
+  Panel -> lowpass/test1_lowpass_panel.png
+
+test2.tif:
+  Gaussian 3x3: mean=135.0839, std=40.8251
+  Median   3x3: mean=135.2812, std=41.7156
+  Gaussian 5x5: mean=135.0478, std=40.2021
+  Median   5x5: mean=135.3338, std=41.1984
+  Gaussian 7x7: mean=135.0283, std=39.9306
+  Median   7x7: mean=135.4581, std=40.6969
+  Panel -> lowpass/test2_lowpass_panel.png
+
+[Task 3] High-pass Filtering (Unsharp, Sobel, Laplace, Canny)
+
+test3_corrupt.pgm:
+  Unsharp: mean=109.4370, std=129.2291
+  Sobel:   mean=70.5499, std=172.3382
+  Laplace: mean=12.0424, std=21.7326
+  Canny:   edges=642 pixels
+  Panel -> highpass/test3_corrupt_highpass_panel.png
+
+test4.tif:
+  Unsharp: mean=136.5430, std=59.5052
+  Sobel:   mean=31.9282, std=52.0303
+  Laplace: mean=3.1727, std=4.2465
+  Canny:   edges=7250 pixels
+  Panel -> highpass/test4_highpass_panel.png

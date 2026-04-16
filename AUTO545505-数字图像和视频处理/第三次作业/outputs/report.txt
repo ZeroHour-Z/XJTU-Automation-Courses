@@ -1,0 +1,67 @@
+[Images]
+citywall.bmp: shape=(512, 512), min=0, max=252, mean=108.4165, std=72.0722
+citywall1.bmp: shape=(512, 512), min=0, max=255, mean=104.4526, std=79.5084
+citywall2.bmp: shape=(512, 512), min=57, max=122, mean=95.1471, std=22.7812
+elain.bmp: shape=(512, 512), min=1, max=242, mean=135.3779, std=46.0505
+elain1.bmp: shape=(512, 512), min=0, max=255, mean=109.9739, std=103.3529
+elain2.bmp: shape=(512, 512), min=0, max=155, mean=124.3974, std=39.9930
+elain3.bmp: shape=(512, 512), min=19, max=40, mean=35.9896, std=5.2919
+lena.bmp: shape=(512, 512), min=3, max=248, mean=99.0512, std=52.8775
+lena1.bmp: shape=(512, 512), min=0, max=255, mean=94.3740, std=116.3973
+lena2.bmp: shape=(512, 512), min=181, max=228, mean=199.0098, std=10.1588
+lena4.bmp: shape=(512, 512), min=0, max=172, mean=35.0262, std=39.4577
+woman.BMP: shape=(2560, 2048), min=0, max=255, mean=122.2173, std=63.3682
+woman1.bmp: shape=(2560, 2048), min=0, max=255, mean=47.4849, std=75.4040
+woman2.bmp: shape=(2560, 2048), min=0, max=155, mean=41.1679, std=38.3881
+
+[Task 1] Histogram Figures
+citywall.bmp -> histograms/citywall_hist.png
+citywall1.bmp -> histograms/citywall1_hist.png
+citywall2.bmp -> histograms/citywall2_hist.png
+elain.bmp -> histograms/elain_hist.png
+elain1.bmp -> histograms/elain1_hist.png
+elain2.bmp -> histograms/elain2_hist.png
+elain3.bmp -> histograms/elain3_hist.png
+lena.bmp -> histograms/lena_hist.png
+lena1.bmp -> histograms/lena1_hist.png
+lena2.bmp -> histograms/lena2_hist.png
+lena4.bmp -> histograms/lena4_hist.png
+woman.BMP -> histograms/woman_hist.png
+woman1.bmp -> histograms/woman1_hist.png
+woman2.bmp -> histograms/woman2_hist.png
+
+[Task 2] Histogram Equalization
+citywall.bmp: std 72.0722 -> 73.9215, range 0-252 -> 0-255
+citywall1.bmp: std 79.5084 -> 85.1330, range 0-255 -> 0-255
+citywall2.bmp: std 22.7812 -> 88.1066, range 57-122 -> 0-255
+elain.bmp: std 46.0505 -> 73.5961, range 1-242 -> 0-255
+elain1.bmp: std 103.3529 -> 84.4884, range 0-255 -> 0-255
+elain2.bmp: std 39.9930 -> 96.9074, range 0-155 -> 0-255
+elain3.bmp: std 5.2919 -> 96.7379, range 19-40 -> 0-255
+lena.bmp: std 52.8775 -> 73.5476, range 3-248 -> 0-255
+lena1.bmp: std 116.3973 -> 114.9958, range 0-255 -> 0-255
+lena2.bmp: std 10.1588 -> 73.4002, range 181-228 -> 0-255
+lena4.bmp: std 39.4577 -> 85.1425, range 0-172 -> 0-255
+woman.BMP: std 63.3682 -> 73.8001, range 0-255 -> 0-255
+woman1.bmp: std 75.4040 -> 72.2346, range 0-255 -> 0-255
+woman2.bmp: std 38.3881 -> 85.4972, range 0-155 -> 0-255
+
+[Task 3] Histogram Matching
+citywall1.bmp -> citywall.bmp: mean 104.4526 -> 114.9166, reference mean 108.4165
+citywall2.bmp -> citywall.bmp: mean 95.1471 -> 126.0420, reference mean 108.4165
+elain1.bmp -> elain.bmp: mean 109.9739 -> 150.8178, reference mean 135.3779
+elain2.bmp -> elain.bmp: mean 124.3974 -> 165.3908, reference mean 135.3779
+elain3.bmp -> elain.bmp: mean 35.9896 -> 169.1124, reference mean 135.3779
+lena1.bmp -> lena.bmp: mean 94.3740 -> 148.3267, reference mean 99.0512
+lena2.bmp -> lena.bmp: mean 199.0098 -> 101.1725, reference mean 99.0512
+lena4.bmp -> lena.bmp: mean 35.0262 -> 111.0262, reference mean 99.0512
+woman1.bmp -> woman.BMP: mean 47.4849 -> 163.8964, reference mean 122.2173
+woman2.bmp -> woman.BMP: mean 41.1679 -> 141.1679, reference mean 122.2173
+
+[Task 4] Local Histogram Equalization (7x7)
+elain.bmp: std 46.0505 -> 65.0304, mean 135.3779 -> 132.7737
+lena.bmp: std 52.8775 -> 64.9602, mean 99.0512 -> 133.4314
+
+[Task 5] Histogram-Based Segmentation
+elain.bmp: threshold=137, foreground_ratio=0.4743
+woman.BMP: threshold=101, foreground_ratio=0.6753

@@ -1,0 +1,22 @@
+[Inputs]
+test1.pgm: shape=(256, 256), min=6, max=255, mean=120.8353, std=71.3312
+test2.tif: shape=(512, 512), min=0, max=202, mean=135.0839, std=42.3748
+test3_corrupt.pgm: shape=(133, 134), min=0, max=255, mean=109.2051, std=121.1118
+test4.tif: shape=(512, 512), min=0, max=254, mean=136.5436, std=57.7858
+
+[Task 1] Frequency Low-pass (Gaussian / Butterworth)
+test1.pgm: radius=36.57, gaussian_psr=0.980215, butterworth_psr=0.985020
+test2.tif: radius=73.14, gaussian_psr=0.990339, butterworth_psr=0.991390
+
+[Task 2] Frequency High-pass (Gaussian / Butterworth)
+test3_corrupt.pgm: radius=14.78, gaussian_psr=0.006644, butterworth_psr=0.008347
+test4.tif: radius=56.89, gaussian_psr=0.001156, butterworth_psr=0.001383
+
+[Task 3] Spatial High-pass (Laplace / Unsharp)
+test3_corrupt.pgm: laplace_std=21.7326, unsharp_std=127.0442, unsharp_mean=109.3463
+test4.tif: laplace_std=4.2465, unsharp_std=59.0064, unsharp_mean=136.5433
+
+[Task 4] Relation Discussion Summary
+1) 频域低通抑制高频，对应空域卷积平滑；频域高通抑制低频，对应空域微分或细节增强。
+2) 在理想线性平移不变条件下，频域乘法与空域卷积等效；有限尺寸、边界处理和离散采样会导致非完全一致。
+3) Gaussian 在频域与空域同为 Gaussian，等效性最好；Butterworth 在空域等效核无限支撑且可能振铃。
